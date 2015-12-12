@@ -20,5 +20,5 @@ via Gradle:
     <app.com.pixelmeasuringview.PixelMeasuringView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:is_line_all_visible="false"
+        app:is_line_all_visible="true"
         app:is_measure_text_visible="true"/>

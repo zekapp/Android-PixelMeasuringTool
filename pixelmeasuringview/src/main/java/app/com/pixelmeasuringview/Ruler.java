@@ -33,7 +33,7 @@ public class Ruler  {
 
         //init textPaint
         mTextPaint = new Paint();
-        mTextPaint.setColor(Color.WHITE);
+        mTextPaint.setColor(Color.BLACK);
     }
 
     public void setPath(float[][] linePoints) {
