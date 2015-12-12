@@ -1,6 +1,5 @@
 package app.com.pixelmeasuringview;
 
-import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.drawable.ShapeDrawable;
@@ -25,7 +24,7 @@ public class CircleDrawable extends ShapeDrawable{
     private  DashPathEffect mPathEffect;
     private boolean mIsSelected;
 
-    public CircleDrawable(){
+    public CircleDrawable(int color){
         super(new OvalShape());
         this.height = INITIAL_HEIGHT;
         this.width = INITIAL_WIDTH;
@@ -33,7 +32,7 @@ public class CircleDrawable extends ShapeDrawable{
         this.mPosY = 0;
         this.mPathEffect = new DashPathEffect(new float[]{10.f,5.0f}, 0);
         getPaint().setStyle(Paint.Style.STROKE);
-        getPaint().setColor(Color.BLACK);
+        getPaint().setColor(color);
         getPaint().setPathEffect(mPathEffect);
         getPaint().setStrokeWidth(DEFAULT_STROKE_WIDTH);
         setBounds(0, 0, (int)INITIAL_HEIGHT, (int)INITIAL_WIDTH);

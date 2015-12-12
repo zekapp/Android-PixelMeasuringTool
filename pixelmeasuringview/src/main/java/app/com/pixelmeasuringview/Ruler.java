@@ -1,6 +1,5 @@
 package app.com.pixelmeasuringview;
 
-import android.graphics.Color;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 
@@ -18,7 +17,7 @@ public class Ruler  {
     private float[][] mStartEndPoints = null;
     private double mLength = 0;
 
-    public Ruler(){
+    public Ruler(int color){
         super();
 
         mNumberFormat = NumberFormat.getInstance();
@@ -27,13 +26,14 @@ public class Ruler  {
         // initLinePaint
         mLinePaint = new Paint();
         mLinePaint.setStrokeWidth(2.f);
-        mLinePaint.setColor(Color.BLACK);
+        mLinePaint.setColor(color);
         mLinePaint.setStyle(Paint.Style.STROKE);
         mLinePaint.setPathEffect(new DashPathEffect(new float[]{10.f,5.0f}, 5));
 
         //init textPaint
         mTextPaint = new Paint();
-        mTextPaint.setColor(Color.BLACK);
+        mTextPaint.setColor(color);
+        mTextPaint.setTextSize(41);
     }
 
     public void setPath(float[][] linePoints) {

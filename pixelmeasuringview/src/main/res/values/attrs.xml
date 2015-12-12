@@ -2,5 +2,7 @@
     <declare-styleable name="InstantMeasuringView">
         <attr name="is_measure_text_visible" format="boolean"/>
         <attr name="is_line_all_visible" format="boolean"/>
+        <attr name="circles_color" format="color"/>
+        <attr name="ruler_color" format="color"/>
     </declare-styleable>
 </resources>

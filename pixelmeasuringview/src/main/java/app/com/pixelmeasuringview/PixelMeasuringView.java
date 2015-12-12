@@ -3,6 +3,7 @@ package app.com.pixelmeasuringview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -35,7 +36,7 @@ public class PixelMeasuringView extends ImageView {
 
     public PixelMeasuringView(Context context) {
         super(context);
-        init(context, false, true);
+        init(context, false, true, Color.BLACK,Color.BLACK);
     }
 
     public PixelMeasuringView(Context context, AttributeSet attrs) {
@@ -43,8 +44,10 @@ public class PixelMeasuringView extends ImageView {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InstantMeasuringView);
         boolean isTextVisible =  a.getBoolean(R.styleable.InstantMeasuringView_is_measure_text_visible, false);
         boolean isLineAllwaysActive  =  a.getBoolean(R.styleable.InstantMeasuringView_is_line_all_visible, false);
+        int cirlesColor = a.getColor(R.styleable.InstantMeasuringView_circles_color, Color.BLACK);
+        int rulerColor = a.getColor(R.styleable.InstantMeasuringView_ruler_color, Color.BLACK);
         a.recycle();
-        init(context,isTextVisible, isLineAllwaysActive);
+        init(context,isTextVisible, isLineAllwaysActive, cirlesColor,rulerColor );
     }
 
     public PixelMeasuringView(Context context, AttributeSet attrs, int defStyle) {
@@ -52,23 +55,26 @@ public class PixelMeasuringView extends ImageView {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InstantMeasuringView, defStyle, 0);
         boolean isTextVisible =  a.getBoolean(R.styleable.InstantMeasuringView_is_measure_text_visible, false);
         boolean isLineAllwaysActive  =  a.getBoolean(R.styleable.InstantMeasuringView_is_line_all_visible, false);
+        int cirlesColor = a.getColor(R.styleable.InstantMeasuringView_circles_color, Color.BLACK);
+        int rulerColor = a.getColor(R.styleable.InstantMeasuringView_ruler_color, Color.BLACK);
         a.recycle();
-        init(context, isTextVisible, isLineAllwaysActive);
+        init(context,isTextVisible, isLineAllwaysActive, cirlesColor,rulerColor);
     }
 
-    private void init(Context context, boolean visible, boolean active) {
+    private void init(Context context, boolean visible, boolean active, int cirleColor, int rulerColor) {
 
         this.isMeasureTextVisible = visible;
         this.isLineAllwaysActive = active;
 
-        mRuler = new Ruler();
 
-        CircleDrawable c1 = new CircleDrawable();
+        mRuler = new Ruler(rulerColor);
+
+        CircleDrawable c1 = new CircleDrawable(cirleColor);
         c1.setPosX(100);
         c1.setPosY(400);
         mCircles.add(c1);
 
-        CircleDrawable c2 = new CircleDrawable();
+        CircleDrawable c2 = new CircleDrawable(cirleColor);
         c2.setPosX(400);
         c2.setPosY(600);
         c2.setScaleFactor(1.7f);
@@ -134,8 +140,6 @@ public class PixelMeasuringView extends ImageView {
                 mLastTouchX = x;
                 mLastTouchY = y;
 
-                calculateDistance();
-
                 drawLineBetweenCircles();
 
                 isCircleMoving = true;
@@ -178,6 +182,8 @@ public class PixelMeasuringView extends ImageView {
     private void drawLineBetweenCircles() {
         if (mCircles.size() < 2)
             return;
+
+        calculateDistance();
 
         float r1 = mCircles.get(0).getDiameter() / 2;
         float x1 = mCircles.get(0).getExactCenterX();
