@@ -11,7 +11,7 @@ via Gradle:
       }
     }
     dependencies {
-      compile 'com.zekapp.library:pixelmeasuringview:1.0.3'
+      compile 'com.zekapp.library:pixelmeasuringview:1.0.4'
     }
     
 ## Usage
