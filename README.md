@@ -1,9 +1,9 @@
 # Android-PixelMeasuringTool
 A imageView with a tool to calculate the pixel between items in the picture
 
-![alt tag](https://github.com/zekapp/Android-PixelMeasuringTool/art/pic-1.png)
-![alt tag](https://github.com/zekapp/Android-PixelMeasuringTool/art/pic-2.png)
-![alt tag](https://github.com/zekapp/Android-PixelMeasuringTool/art/pic-3.png)
+![alt tag](https://github.com/zekapp/Android-PixelMeasuringTool/blob/master/art/pic-1.png)
+![alt tag](https://github.com/zekapp/Android-PixelMeasuringTool/blob/master/art/pic-2.png)
+![alt tag](https://github.com/zekapp/Android-PixelMeasuringTool/blob/master/art/pic-3.png)
 
 ## Download
 
