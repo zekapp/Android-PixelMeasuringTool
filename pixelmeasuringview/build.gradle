@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/zekapp/Android-PixelMeasuringTool'
     gitUrl = 'https://github.com/zekapp/Android-PixelMeasuringTool.git'
 
-    libraryVersion = '1.0.4'
+    libraryVersion = '1.0.5'
 
     developerId = 'zekapp'
     developerName = 'Zeki Guler'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.4"
+        versionName "1.0.5"
     }
     buildTypes {
         release {

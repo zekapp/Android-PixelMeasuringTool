@@ -27,7 +27,7 @@ public class Ruler  {
         // initLinePaint
         mLinePaint = new Paint();
         mLinePaint.setStrokeWidth(2.f);
-        mLinePaint.setColor(Color.WHITE);
+        mLinePaint.setColor(Color.BLACK);
         mLinePaint.setStyle(Paint.Style.STROKE);
         mLinePaint.setPathEffect(new DashPathEffect(new float[]{10.f,5.0f}, 5));
 
