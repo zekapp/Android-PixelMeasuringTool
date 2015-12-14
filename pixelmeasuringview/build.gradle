@@ -4,7 +4,7 @@ ext {
     bintrayRepo = 'Maven'
     bintrayName = 'pixel-measuring-tool'
 
-    publishedGroupId = 'com.zekapp.library'
+    publishedGroupId = 'org.zekapp.library'
     libraryName = 'pixel-measuring-tool'
     artifact = 'pixelmeasuringview'
 

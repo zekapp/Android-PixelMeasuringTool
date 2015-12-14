@@ -8,7 +8,7 @@ A imageView with a tool to calculate the pixel between items in the picture
 via Gradle:
 
     dependencies {
-      compile 'com.zekapp.library:pixelmeasuringview:1.0.7'
+      compile 'org.zekapp.library:pixelmeasuringview:1.0.7'
     }
     
 ## Usage
