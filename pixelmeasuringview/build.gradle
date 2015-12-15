@@ -4,7 +4,7 @@ ext {
     bintrayRepo = 'Maven'
     bintrayName = 'pixel-measuring-tool'
 
-    publishedGroupId = 'org.zekapp.library'
+    publishedGroupId = 'com.zekapp.library'
     libraryName = 'pixel-measuring-tool'
     artifact = 'pixelmeasuringview'
 
@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/zekapp/Android-PixelMeasuringTool'
     gitUrl = 'https://github.com/zekapp/Android-PixelMeasuringTool.git'
 
-    libraryVersion = '1.0.7'
+    libraryVersion = '1.0.8'
 
     developerId = 'zekapp'
     developerName = 'Zeki Guler'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
-        versionName "1.0.7"
+        versionName "1.0.8"
     }
     buildTypes {
         release {

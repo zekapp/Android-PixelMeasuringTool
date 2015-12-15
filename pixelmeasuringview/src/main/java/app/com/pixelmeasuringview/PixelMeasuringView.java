@@ -41,22 +41,29 @@ public class PixelMeasuringView extends ImageView {
 
     public PixelMeasuringView(Context context, AttributeSet attrs) {
         super(context, attrs);
+
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InstantMeasuringView);
-        boolean isTextVisible =  a.getBoolean(R.styleable.InstantMeasuringView_is_measure_text_visible, false);
-        boolean isLineAllwaysActive  =  a.getBoolean(R.styleable.InstantMeasuringView_is_line_all_visible, false);
-        int cirlesColor = a.getColor(R.styleable.InstantMeasuringView_circles_color, Color.BLACK);
-        int rulerColor = a.getColor(R.styleable.InstantMeasuringView_ruler_color, Color.BLACK);
+
+        boolean isTextVisible           =  a.getBoolean (R.styleable.InstantMeasuringView_is_measure_text_visible, false);
+        boolean isLineAllwaysActive     =  a.getBoolean (R.styleable.InstantMeasuringView_is_line_all_visible, false);
+        int cirlesColor                 =  a.getColor   (R.styleable.InstantMeasuringView_circles_color, Color.BLACK);
+        int rulerColor                  =  a.getColor   (R.styleable.InstantMeasuringView_ruler_color, Color.BLACK);
+
         a.recycle();
+
         init(context,isTextVisible, isLineAllwaysActive, cirlesColor,rulerColor );
     }
 
     public PixelMeasuringView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.InstantMeasuringView, defStyle, 0);
-        boolean isTextVisible =  a.getBoolean(R.styleable.InstantMeasuringView_is_measure_text_visible, false);
-        boolean isLineAllwaysActive  =  a.getBoolean(R.styleable.InstantMeasuringView_is_line_all_visible, false);
-        int cirlesColor = a.getColor(R.styleable.InstantMeasuringView_circles_color, Color.BLACK);
-        int rulerColor = a.getColor(R.styleable.InstantMeasuringView_ruler_color, Color.BLACK);
+
+        boolean isTextVisible           =  a.getBoolean (R.styleable.InstantMeasuringView_is_measure_text_visible, false);
+        boolean isLineAllwaysActive     =  a.getBoolean (R.styleable.InstantMeasuringView_is_line_all_visible, false);
+        int cirlesColor                 =  a.getColor   (R.styleable.InstantMeasuringView_circles_color, Color.BLACK);
+        int rulerColor                  =  a.getColor   (R.styleable.InstantMeasuringView_ruler_color, Color.BLACK);
+
         a.recycle();
         init(context,isTextVisible, isLineAllwaysActive, cirlesColor,rulerColor);
     }
