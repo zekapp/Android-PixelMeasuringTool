@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import app.com.pixelmeasuringview.PixelMeasuringCallback;
+import app.com.pixelmeasuringview.PixelMeasuringView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        PixelMeasuringView measure = (PixelMeasuringView)findViewById(R.id.lawn_ball_layout);
+        measure.setCallback(new PixelMeasuringCallback() {
+            @Override
+            public void distanceBetweenCircles(float distance) {
+
             }
         });
     }

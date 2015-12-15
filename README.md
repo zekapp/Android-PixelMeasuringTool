@@ -15,7 +15,7 @@ via Gradle:
 
     <app.com.pixelmeasuringview.PixelMeasuringView
         xmlns:measure="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/lawn_ball_layout"
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
@@ -26,6 +26,23 @@ via Gradle:
         measure:circles_color="@android:color/black"
         measure:ruler_color="@android:color/black"
         />
+
+## Getting Pixel Programmatically
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+    
+            PixelMeasuringView measure = (PixelMeasuringView)findViewById(R.id.image);
+            measure.setCallback(new PixelMeasuringCallback() {
+                @Override
+                public void distanceBetweenCircles(float distance) {
+                   
+                }
+            });
+        }
+
 
 ## License
 
