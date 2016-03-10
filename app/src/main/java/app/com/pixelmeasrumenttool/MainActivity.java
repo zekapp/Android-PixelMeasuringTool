@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         measure.setCallback(new PixelMeasuringCallback() {
             @Override
             public void distanceBetweenCircles(float distance) {
-
+                clearSteps();
             }
         });
     }
