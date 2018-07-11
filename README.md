@@ -8,7 +8,7 @@ A tool to measure the pixel between items in the picture.
 via Gradle:
 
     dependencies {
-        compile 'com.zekapp.library:pixelmeasuringview:1.0.9'
+        compile 'com.zekapp.library:pixelmeasuringview:1.0.10'
     }
     
 ## Usage
