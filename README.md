@@ -1,14 +1,14 @@
 # Android-PixelMeasuringTool
-A imageView with a tool to calculate the pixel between items in the picture
+A tool to measure the pixel between items in the picture. 
 
-![Check Diagram](art/pic-all.png)
+![Alt Text](art/pixel_measure.gif)
 
 ## Download
 
 via Gradle:
 
     dependencies {
-        compile 'com.zekapp.library:pixelmeasuringview:1.0.8'
+        compile 'com.zekapp.library:pixelmeasuringview:1.0.9'
     }
     
 ## Usage
@@ -43,6 +43,7 @@ via Gradle:
             });
         }
 
+![Check Diagram](art/pic-all.png)
 
 ## License
 

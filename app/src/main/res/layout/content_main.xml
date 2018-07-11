@@ -16,7 +16,7 @@
         android:scaleType="centerCrop"
         android:background="@drawable/background"
         measure:is_line_all_visible="true"
-        measure:is_measure_text_visible="false"
+        measure:is_measure_text_visible="true"
         measure:circles_color="@color/circleColor"
         measure:ruler_color="@color/rulerColor"
         />
