@@ -1,5 +1,8 @@
 # Android-PixelMeasuringTool
-A tool to measure the pixel between items in the picture. 
+A tool to measure the pixel between items in the picture.
+
+I don't know what might be possible usage. 
+I used it in a calculation of the actual distance of the balls in a game called lawn bowls. If you know the approximate height of the phone when the picture was taken (and getting a little bit of help from the gyroscope to be sure that the phone is parallel to the ground) you can get the actual distance between the two items in the picture.
 
 ![Alt Text](art/pixel_measure.gif)
 
